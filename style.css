@@ -47,7 +47,7 @@ nav ul {
   align-items: center;
   color: #ededed;
   text-shadow: 0 0 15px #8e54e9;
-  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: only screen 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .menu li::after {
@@ -56,7 +56,7 @@ nav ul {
   width: 0%;
   height: 1px;
   display: block;
-  transition: all 0.5s ease-in-out;
+  transition: only screen 0.5s ease-in-out;
   top: 25px;
 }
 
@@ -64,6 +64,10 @@ nav ul {
   width: 100%;
   height: 1px;
   background-color: #0ef;
+}
+
+li > a:focus {
+  color: #0ef;
 }
 
 li > a {
@@ -89,7 +93,7 @@ li > a:hover {
 
 .socialMedia > li:hover {
   cursor: pointer;
-  scale:  1.05;
+  scale: 1.05;
 }
 
 .whatsappImage,
@@ -99,4 +103,32 @@ li > a:hover {
 .TwitterImage {
   width: 25px;
   height: 25px;
+}
+
+@media screen and (max-width: 750px) {
+  nav > .menu {
+    display: none;
+  }
+
+  .socialMedia {
+    gap: 5px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .socialMedia {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 180px) {
+  .navbar > h1 {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 140px) {
+  .navbar > h1 {
+    font-size: 7px;
+  }
 }
