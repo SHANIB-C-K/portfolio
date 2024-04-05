@@ -20,8 +20,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
   margin: 15px 15px 0 15px;
-  border-bottom: 1px solid #0ef;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 0 8px #0ef;
 }
 
 .navbar h1 {
@@ -73,7 +78,7 @@ li > a:focus {
 li > a {
   text-decoration: none;
   color: #ededed;
-  margin-bottom: 5px;
+  text-align: center;
 }
 
 li > a:hover {
@@ -84,7 +89,6 @@ li > a:hover {
 .socialMedia {
   display: flex;
   justify-content: space-around;
-  font-size: 20px;
 }
 
 .socialMedia li {
@@ -101,6 +105,7 @@ li > a:hover {
 .GithubImage,
 .InstagramImage,
 .TwitterImage {
+  display: flex;
   width: 25px;
   height: 25px;
 }
@@ -115,19 +120,19 @@ li > a:hover {
   }
 }
 
-@media only screen and (max-width: 350px) {
-  .socialMedia {
+@media only screen and (max-width: 380px) {
+  .socialMedia li > a {
     display: none;
   }
 }
 
-@media only screen and (max-width: 180px) {
+@media only screen and (max-width: 250px) {
   .navbar > h1 {
     font-size: 13px;
   }
 }
 
-@media only screen and (max-width: 140px) {
+@media only screen and (max-width: 185px) {
   .navbar > h1 {
     font-size: 7px;
   }
