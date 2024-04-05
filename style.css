@@ -121,12 +121,22 @@ li > a:hover {
 }
 
 @media only screen and (max-width: 380px) {
-  .socialMedia li > a {
-    display: none;
+
+  .navbar > h1 {
+    font-size: 20px;
+  }
+
+  .socialMedia {
+    gap: 0px;
   }
 }
 
-@media only screen and (max-width: 250px) {
+@media only screen and (max-width: 330px) {
+
+  .socialMedia li > a {
+    display: none;
+  }
+
   .navbar > h1 {
     font-size: 13px;
   }
