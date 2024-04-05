@@ -110,7 +110,7 @@ li > a:hover {
   height: 25px;
 }
 
-@media screen and (max-width: 750px) {
+@media only screen and (max-width: 750px) {
   nav > .menu {
     display: none;
   }
