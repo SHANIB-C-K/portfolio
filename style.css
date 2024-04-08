@@ -29,14 +29,71 @@ body {
   box-shadow: 0 0 8px #0ef;
 }
 
-.navbar h1 {
+/* .navbar h1 {
   font-size: 25px;
   color: #ededed;
   text-align: center;
   text-shadow: 0 0 3px #0ef;
   letter-spacing: 1px;
   transition: 0.5s;
+} */
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.heading > h1 {
+  font-size: 25px;
+  color: #ededed;
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    color: #0ef;
+    text-shadow: 0 0 12px #0ef, 0 0 50px #0ef, 0 0 100px #0ef;
+  }
+  10%, 90% {
+    color: #ededed;
+    text-shadow: none;
+  }
+}
+
+.heading > h1:nth-child(1) {
+  animation-delay: 0.09s;
+}
+
+.heading > h1:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.heading > h1:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.heading > h1:nth-child(4) {
+  animation-delay: 0.75s;
+}
+
+.heading > h1:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.heading > h1:nth-child(6) {
+  animation-delay: 1.25s;
+}
+
+.heading > h1:nth-child(7) {
+  animation-delay: 1.50s;
+}
+
+.heading > h1:nth-child(8) {
+  animation-delay: 1.75s;
+}
+
+
 
 nav ul {
   display: flex;
@@ -121,7 +178,6 @@ li > a:hover {
 }
 
 @media only screen and (max-width: 380px) {
-
   .navbar > h1 {
     font-size: 20px;
   }
@@ -132,7 +188,6 @@ li > a:hover {
 }
 
 @media only screen and (max-width: 330px) {
-
   .socialMedia li > a {
     display: none;
   }
