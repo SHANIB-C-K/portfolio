@@ -66,7 +66,7 @@ body {
 }
 
 .heading > h1:nth-child(1) {
-  animation-delay: 0.09s;
+  animation-delay: 0.10s;
 }
 
 .heading > h1:nth-child(2) {
@@ -393,6 +393,60 @@ li > a:hover {
   object-fit: cover;
 }
 
+.hero-image1 {
+  display: none;
+  width: 410px;
+  height: 410px;
+}
+
+.hero-image1 > .glowing-circle1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image1 > .glowing-circle1::after {
+  content: '';
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  background: #081b29;
+  border-radius: 50%;
+}
+
+.glowing-circle1 span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #00abf0, #8e54e9);
+  border-radius: 50%;
+}
+
+.glowing-circle1 span:nth-child(1) {
+  filter: blur(10px);
+}
+
+.glowing-circle1 > .image1 {
+  position: relative;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.image1 > img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 350px;
+  object-fit: cover;
+}
+
 @media only screen and (max-width: 1150px) {
   .hero {
     justify-content: center;
@@ -448,5 +502,190 @@ li > a:hover {
   
   .image > img {
     max-width: 350px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .hero {
+    gap: 30px;
+  }
+  
+  .hero-content {
+    max-width: 400px;
+  }
+  
+  .hero-content > h1 {
+    font-size: 40px;
+  }
+  
+  .hero-content > h2 {
+    font-size: 20px;
+  }
+  
+  .hero-content > p {
+    font-size: 12px;
+  }
+  
+  .hero-content > .btn-box {
+    width: 220px;;
+    height: 45px;
+  }
+  
+  .btn-box > a {
+    width: 100px;
+    font-size: 15px;
+  }
+  
+  .home-sci {
+    bottom: 130px;
+  }
+  
+  .hero-image {
+    width: 350px;
+    height: 350px;
+  }
+  
+  
+  .hero-image > .glowing-circle::after {
+    width: 320px;
+    height: 320px;
+  }
+
+  .glowing-circle > .image {
+    width: 320px;
+    height: 320px;
+  }
+  
+  .image > img {
+    max-width: 320px;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .hero {
+    gap: 30px;
+  }
+  
+  .hero-content {
+    max-width: 350px;
+  }
+  
+  .hero-content > h1 {
+    font-size: 38px;
+  }
+  
+  .hero-content > h2 {
+    font-size: 18px;
+  }
+  
+  .hero-content > p {
+    font-size: 12px;
+  }
+  
+  .hero-content > .btn-box {
+    width: 200px;;
+    height: 45px;
+  }
+  
+  .btn-box > a {
+    width: 90px;
+    font-size: 15px;
+  }
+  
+  .home-sci {
+    bottom: 150px;
+  }
+  
+  .hero-image {
+    width: 320px;
+    height: 320px;
+  }
+  
+  
+  .hero-image > .glowing-circle::after {
+    width: 300px;
+    height: 300px;
+  }
+
+  .glowing-circle > .image {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .image > img {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 740px) {
+
+  .hero-image {
+    display: none;
+  }
+
+  .hero-image1 {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 25px;
+  }
+  
+  .hero-image1 > .glowing-circle1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-image1 > .glowing-circle1::after {
+    content: '';
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: #081b29;
+    border-radius: 50%;
+  }
+  
+  .glowing-circle1 span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #00abf0, #8e54e9);
+    border-radius: 50%;
+  }
+  
+  .glowing-circle1 span:nth-child(1) {
+    filter: blur(10px);
+  }
+  
+  .glowing-circle1 > .image1 {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .image1 > img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 300px;
+    object-fit: cover;
+  }
+
+  .home-sci {
+    bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .home-sci {
+    bottom: -80px;
   }
 }
