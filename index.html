@@ -35,7 +35,7 @@
         <header>
             <nav>
                 <ul class="menu">
-                    <li><a href="#Home" onclick="Home()" id="Home">Home</a></li>
+                    <li><a href="#home" onclick="Home()" id="Home">Home</a></li>
                     <li><a href="#aboutme" onclick="About()" id="About">About Me</a></li>
                     <li><a href="#services" onclick="Services()" id="Services">Services</a></li>
                     <li><a href="#contact" onclick="Contact()" id="Contact">Contact</a></li>
@@ -60,8 +60,8 @@
     </div>
 
     <!-- hero section -->
-    <section class="hero" id="Home">
-        <div class="hero-content">
+    <section class="hero">
+        <div class="hero-content" id="home">
             <div class="hero-image1">
                 <div class="glowing-circle1">
                     <span></span>
@@ -78,7 +78,8 @@
             </div>
             <h1>Hi, I'm Shanib c k</h1>
             <h2>Mern Stack Developer</h2>
-            <p>Hello there! I'm Shanib C K, a passionate MERN (MongoDB, Express.js, React.js, Node.js) stack developer
+            <p>Hello there! I'm Shanib C K, a passionate MERN (MongoDB, Express.js, React.js, Node.js) stack
+                developer
                 with a keen eye for crafting robust and dynamic web applications. Welcome to my portfolio, where
                 innovation meets functionality.</p>
             <div class="btn-box">
@@ -105,17 +106,15 @@
                 <p class="container-title">Basic Info About Me</p>
                 <div class="card">
                     <div class="container-card bg-blue-box">
+                        <span></span>
                         <p class="card-title">Basic Info About Me</p>
                         <p class="card-description">
-                            Iam a Deploma Computer Engineering student at Madin Polytechnic College, Malappuram, Kerala,
-                            India. I love to code and play games. Iam passionate about computer Engineering. Iam a web
+                            Iam a Deploma Computer Engineering student at Madin Polytechnic College, Malappuram,
+                            Kerala,
+                            India. I love to code and play games. Iam passionate about computer Engineering. Iam a
+                            web
                             developer. currently student as Madin Polytechnic College.
-                            Iam always ready to work on cool projects. Feel free to contact me for collaboration or any
-                            kind of stuffs related to computer Engineering. With a fervent love for coding and a
-                            dedication to mastering the MERN stack, I bring a wealth of experience and expertise to
-                            every project I undertake. From crafting seamless user experiences to implementing scalable
-                            backend solutions, I thrive on the challenges that come with building cutting-edge web
-                            applications.</p>
+                            Iam always ready to work on cool projects.</p>
                     </div>
                 </div>
             </div>
@@ -123,8 +122,72 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- services section  -->
+    <section class="services">
+        <h1 id="services">My Services</h1>
+        <p>I provide high quality services. My services that I provide are listed below. Hope you will like them.
+            Contact me if you need my service.</p>
 
+        <div class="cards">
+            <div class="ser-card" title="coding">
+                <p class="ser-icon"><i class='bx bx-code-alt'></i></p>
+                <p class="ser-title">Coding</p>
+            </div>
+            <div class="ser-card" title="Web Development">
+                <div class="ser-icon"><i class='bx bx-desktop'></i></div>
+                <p class="ser-title">Web Development</p>
+            </div>
+            <div class="ser-card" title="Creativity">
+                <p class="ser-icon"><i class='bx bx-bulb'></i></p>
+                <p class="ser-title">Creativity</p>
+            </div>
+            <div class="ser-card" title="Troubleshooting">
+                <p class="ser-icon"><i class='bx bx-cog'></i></p>
+                <p class="ser-title">Troubleshooting</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="contact">
+        <h2 id="contact">Contact Me!</h2>
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
+                    <div class="error-txt">Full Name can't be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="email" placeholder="Email Address" id="email" class="item" autocomplete="off">
+                    <div class="error-txt email">Email address can't be blank</div>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Phone Number" id="phone" class="item" autocomplete="off">
+                    <div class="error-txt">Phone Number can't be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off">
+                    <div class="error-txt">Subject can't be blank</div>
+                </div>
+            </div>
+
+            <div class="textarea-field field">
+                <textarea name="" id="message" class="item" cols="30" rows="10" placeholder="Your Message"
+                    autocomplete="off"></textarea>
+                <div class="error-txt">Message can't be blank</div>
+            </div>
+            .
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
