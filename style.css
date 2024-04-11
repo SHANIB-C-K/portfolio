@@ -682,6 +682,15 @@ li > a:hover {
   .home-sci {
     bottom: 0;
   }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
 }
 
 @media only screen and (max-width: 380px) {
