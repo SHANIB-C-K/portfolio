@@ -35,10 +35,10 @@
         <header>
             <nav>
                 <ul class="menu">
-                    <li><a href="#aboutme">About Me</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#Home" onclick="Home()" id="Home">Home</a></li>
+                    <li><a href="#aboutme" onclick="About()" id="About">About Me</a></li>
+                    <li><a href="#services" onclick="Services()" id="Services">Services</a></li>
+                    <li><a href="#contact" onclick="Contact()" id="Contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -60,7 +60,7 @@
     </div>
 
     <!-- hero section -->
-    <section class="hero">
+    <section class="hero" id="Home">
         <div class="hero-content">
             <div class="hero-image1">
                 <div class="glowing-circle1">
@@ -78,8 +78,9 @@
             </div>
             <h1>Hi, I'm Shanib c k</h1>
             <h2>Mern Stack Developer</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi ex eum dolor eius deleniti reiciendis
-                libero aliquid omnis enim quaerat! A nisi saepe quos unde dolores porro temporibus deleniti placeat!</p>
+            <p>Hello there! I'm Shanib C K, a passionate MERN (MongoDB, Express.js, React.js, Node.js) stack developer
+                with a keen eye for crafting robust and dynamic web applications. Welcome to my portfolio, where
+                innovation meets functionality.</p>
             <div class="btn-box">
                 <a href="#">Hire Me</a>
                 <a href="#">Let's Talk</a>
@@ -96,6 +97,34 @@
             </div>
         </div>
     </section>
+
+    <!-- about me section -->
+    <section class="about">
+        <div class="about-container" id="aboutme">
+            <div class="container">
+                <p class="container-title">Basic Info About Me</p>
+                <div class="card">
+                    <div class="container-card bg-blue-box">
+                        <p class="card-title">Basic Info About Me</p>
+                        <p class="card-description">
+                            Iam a Deploma Computer Engineering student at Madin Polytechnic College, Malappuram, Kerala,
+                            India. I love to code and play games. Iam passionate about computer Engineering. Iam a web
+                            developer. currently student as Madin Polytechnic College.
+                            Iam always ready to work on cool projects. Feel free to contact me for collaboration or any
+                            kind of stuffs related to computer Engineering. With a fervent love for coding and a
+                            dedication to mastering the MERN stack, I bring a wealth of experience and expertise to
+                            every project I undertake. From crafting seamless user experiences to implementing scalable
+                            backend solutions, I thrive on the challenges that come with building cutting-edge web
+                            applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
