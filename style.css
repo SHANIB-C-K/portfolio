@@ -1017,3 +1017,9 @@ form button:hover {
     text-align: center;
   }
 }
+
+@media screen and (max-width: 1120px) {
+  .home-sci {
+    display: none;
+  }
+}
