@@ -1048,4 +1048,11 @@ form button:hover {
   .textarea-field {
     margin-left: 40px;
   }
+
+}
+
+@media screen and (max-width: 1120px) {
+  .home-sci {
+    display: none;
+  }
 }
