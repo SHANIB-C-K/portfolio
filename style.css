@@ -374,7 +374,6 @@ li > a:hover {
   height: 100%;
   background: linear-gradient(45deg, #00abf0, #8e54e9);
   border-radius: 50%;
-  animation: spin 3s infinite ease-in-out;
 }
 
 .glowing-circle span:nth-child(1) {
