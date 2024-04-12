@@ -14,7 +14,6 @@ body {
   /* background: #1f242d; */
   background: #081b29;
   color: #ededed;
-  /* overflow-x: hidden; */
 }
 
 .navbar {
@@ -375,6 +374,7 @@ li > a:hover {
   height: 100%;
   background: linear-gradient(45deg, #00abf0, #8e54e9);
   border-radius: 50%;
+  animation: spin 3s infinite ease-in-out;
 }
 
 .glowing-circle span:nth-child(1) {
@@ -815,7 +815,6 @@ li > a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .services > h1 {
@@ -1014,32 +1013,7 @@ form button:hover {
 
 @media screen and (max-width: 660px) {
   .contact form {
-    width: 400px;
-  }
-}
-
-@media screen and (max-width: 460px) {
-  form .input-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .input-box .input-field {
-    width: 80%;
-  }
-  .textarea-field {
-    width: 80%;
-  }
-
-  .textarea-field {
-    margin-left: 40px;
-  }
-
-}
-
-@media screen and (max-width: 1120px) {
-  .home-sci {
-    display: none;
+    width: 300px;
+    text-align: center;
   }
 }
