@@ -374,6 +374,7 @@ li > a:hover {
   height: 100%;
   background: linear-gradient(45deg, #00abf0, #8e54e9);
   border-radius: 50%;
+  animation: spin 3s infinite ease-in-out;
 }
 
 .glowing-circle span:nth-child(1) {
@@ -829,10 +830,10 @@ li > a:hover {
 }
 
 .cards {
-  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 20px;
+  row-gap: 20px;
 }
 
 .cards > .ser-card {
@@ -885,6 +886,9 @@ li > a:hover {
   }
   .cards {
     margin-top: 30px;
+  }
+  .contact {
+    margin-top: 60px;
   }
 }
 
@@ -970,11 +974,11 @@ form .textarea-field .error-txt {
 
 form button {
   padding: 12px 32px;
-  background: #0ef;
+  background: #00abf0;
   border: none;
   outline: none;
   border-radius: 6px;
-  box-shadow: 0 0 10px #0ef;
+  box-shadow: 0 0 10px #00abf0;
   font-size: 16px;
   color: #333;
   letter-spacing: 1px;
@@ -982,8 +986,27 @@ form button {
   cursor: pointer;
   margin-top: 20px;
   transition: 0.5s;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+form button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: 0.5s;
+  background: #081b29;
+}
+
+form button:hover::before {
+  width: 100%;
 }
 
 form button:hover {
-  box-shadow: none;
+  color: #00abf0;
 }
