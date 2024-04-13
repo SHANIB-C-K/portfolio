@@ -29,6 +29,7 @@ body {
   border-radius: 6px;
   padding: 15px;
   box-shadow: 0 0 8px #0ef;
+  position: sticky;
 }
 
 /* .navbar h1 {
@@ -44,6 +45,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .heading > h1 {
@@ -142,6 +156,20 @@ li > a {
   text-decoration: none;
   color: #ededed;
   text-align: center;
+  opacity: 0;
+  animation: slideBottom 0.5s ease forwards;
+  animation-delay: calc(0.5s * var(--i));
+}
+
+@keyframes slideBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 li > a:hover {
@@ -156,6 +184,20 @@ li > a:hover {
 
 .socialMedia li {
   list-style-type: none;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: calc(0.5s * var(--j));
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(64px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .socialMedia > li:hover {
@@ -225,17 +267,57 @@ li > a:hover {
   font-size: 56px;
   font-weight: 700;
   line-height: 1.2;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .hero-content > h2 {
   font-size: 32px;
   font-weight: 700;
   color: #00abf0;
+  opacity: 0;
+  animation: slideLeft 1s ease-in-out 0.8s forwards;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .hero-content > p {
   font-size: 16px;
   margin: 20px 0 40px;
+  opacity: 0;
+  animation: showText 1s linear 1s forwards;
+}
+
+@keyframes showText {
+  /* Show text from bottom to center */
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-content > .btn-box {
@@ -243,6 +325,20 @@ li > a:hover {
   justify-content: space-between;
   width: 345px;
   height: 50px;
+  opacity: 0;
+  animation: showBtnBox 1s ease-in-out 1.2s forwards;
+}
+
+@keyframes showBtnBox {
+  /* Fade in and scale up button box */
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .btn-box > a {
@@ -304,6 +400,19 @@ li > a:hover {
   width: 170px;
   display: flex;
   justify-content: space-between;
+  opacity: 0;
+  animation: showUp 1s ease forwards;
+}
+
+@keyframes showUp {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .home-sci > a {
@@ -347,7 +456,32 @@ li > a:hover {
 .hero-image {
   width: 410px;
   height: 410px;
+  opacity: 0;
+  animation: zoomIn 2.1s ease forwards;
 }
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* @keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-24px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+} */
 
 .hero-image > .glowing-circle {
   position: relative;
@@ -401,6 +535,8 @@ li > a:hover {
   display: none;
   width: 410px;
   height: 410px;
+  opacity: 0;
+  animation: zoomIn 2.1s ease forwards;
 }
 
 .hero-image1 > .glowing-circle1 {
@@ -750,6 +886,20 @@ li > a:hover {
   color: #00abf0;
   font-weight: 600;
   line-height: 60px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .card {
@@ -757,6 +907,8 @@ li > a:hover {
   border: 0;
   width: 100%;
   margin-inline: auto;
+  opacity: 0;
+  animation: zoomIn 2s ease-in-out forwards;
 }
 
 .container-card {
@@ -821,11 +973,17 @@ li > a:hover {
   font-size: 40px;
   font-weight: 600;
   color: #00abf0;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 0.5s;
 }
 
 .services > p {
   text-align: center;
   margin: 10px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 1s;
 }
 
 .cards {
@@ -833,6 +991,17 @@ li > a:hover {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 20px;
   row-gap: 20px;
+}
+
+@keyframes floatLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
 }
 
 .cards > .ser-card {
@@ -850,6 +1019,8 @@ li > a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  opacity: 0;
+  animation: floatLeft 1.5s ease-in-out forwards;
 }
 
 .cards > .ser-card:hover {
@@ -915,6 +1086,9 @@ li > a:hover {
   color: #00abf0;
   text-align: center;
   margin-bottom: 10px;
+  opacity: 0;
+  animation: showUp 1s ease-in-out forwards;
+  animation-delay: 0.7s;
 }
 
 .contact form {
@@ -925,6 +1099,9 @@ li > a:hover {
 form .input-box {
   display: flex;
   justify-content: space-between;
+  opacity: 0;
+  animation: showUp 0.9s ease-in-out forwards;
+  animation-delay: 0.3s;
 }
 
 .input-box .input-field {
@@ -965,6 +1142,9 @@ form .input-box {
 
 form .textarea-field .item {
   resize: none;
+  opacity: 0;
+  animation: showUp 0.9s ease-in-out forwards;
+  animation-delay: 0.3s;
 }
 
 form .textarea-field .error-txt {
@@ -988,6 +1168,9 @@ form button {
   z-index: 1;
   overflow: hidden;
   position: relative;
+  opacity:  0;
+  transform: translateY(10%);
+  animation: showUp 0.8s ease-in-out forwards;
 }
 
 form button::before {
@@ -1020,5 +1203,192 @@ form button:hover {
 @media screen and (max-width: 1120px) {
   .home-sci {
     display: none;
+  }
+}
+
+/* footer css section */
+footer {
+  height: 300px;
+  background-color: #080509;
+  width: auto;
+  margin: 15px 15px 0 15px;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 0 8px #0ef;
+  margin-bottom: 20px;
+  opacity:  0;
+  animation: showFooter 1s forwards;
+}
+
+@keyframes showFooter {
+  0% {
+    opacity:  0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity:  1;
+    transform: translateY(0);
+  }
+}
+
+footer > .heading1 {
+  display: flex;
+}
+
+.heading1 > h1 {
+  font-size: 25px;
+  color: #ededed;
+  animation: glow 2s ease-in-out infinite;
+}
+
+.heading1 > h1:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.heading1 > h1:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.heading1 > h1:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.heading1 > h1:nth-child(4) {
+  animation-delay: 0.75s;
+}
+
+.heading1 > h1:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.heading1 > h1:nth-child(6) {
+  animation-delay: 1.25s;
+}
+
+.heading1 > h1:nth-child(7) {
+  animation-delay: 1.5s;
+}
+
+.heading1 > h1:nth-child(8) {
+  animation-delay: 1.75s;
+}
+
+.footer-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  margin-top: 20px;
+}
+
+.address > h1 {
+  font-size: 25px;
+}
+
+address {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+address > p {
+  color: hsla(0, 0%, 100%, 0.5);
+  font-weight: 200;
+}
+
+.connect > h1 {
+  font-size: 25px;
+}
+
+.connect > .connect-social {
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+}
+
+.connect-social > li {
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  padding: 5px;
+  background: #00abf0;
+  color: #081b29;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.connect-social > li::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #081b29;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.connect-social > li:hover::before {
+  height: 100%;
+}
+
+.footer-services > h1 {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 1110px) {
+  .address > h1 {
+    font-size: 20px;
+  }
+  .footer-section {
+    gap: 80px;
+  }
+  .connect > h1 {
+    font-size: 20px;
+  }
+  .footer-services > h1 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  footer p {
+    font-size: 13px;
+  }
+
+  .footer-services ul {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  footer p {
+    font-size: 8px;
+  }
+
+  .footer-services ul {
+    font-size: 8px;
+  }
+
+  .connect > .connect-social {
+    gap: 0;
+  }
+
+  .connect-social > li {
+    display: none;
+  }
+
+  .address > h1 {
+    font-size: 15px;
+  }
+  .connect > h1 {
+    font-size: 15px;
+  }
+  .footer-services > h1 {
+    font-size: 15px;
+  }
+  .footer-section {
+    gap: 50px;
   }
 }
