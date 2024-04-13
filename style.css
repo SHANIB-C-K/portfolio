@@ -7,6 +7,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   /* display: flex;
   align-items: center; */
@@ -1391,4 +1395,20 @@ address > p {
   .footer-section {
     gap: 50px;
   }
+}
+
+
+/* scrollba animation section */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #081b29;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #00abf0, #0ef);
+  border-radius: 10px;
+  cursor: pointer;
 }
