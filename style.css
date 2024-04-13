@@ -1383,7 +1383,7 @@ address > p {
 
 @media screen and (max-width: 650px) {
   footer {
-    margin-top: -50px;
+    margin-top: -10px;
     height: 250px;
   }
   footer p {
