@@ -461,7 +461,7 @@ li > a:hover {
   width: 410px;
   height: 410px;
   opacity: 0;
-  animation: zoomIn 2.1s ease forwards;
+  animation: zoomIn 2s ease forwards;
 }
 
 @keyframes zoomIn {
