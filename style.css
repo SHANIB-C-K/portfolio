@@ -182,7 +182,7 @@ li > a:hover {
 }
 
 .socialMedia {
-  display: flex;
+  display: none;
   justify-content: space-around;
 }
 
@@ -214,7 +214,7 @@ li > a:hover {
 .GithubImage,
 .InstagramImage,
 .TwitterImage {
-  display: flex;
+  display: none;
   width: 25px;
   height: 25px;
 }
