@@ -187,6 +187,7 @@ li > a:hover {
 }
 
 .socialMedia li {
+  display: none;
   list-style-type: none;
   opacity: 0;
   animation: slideLeft 1s ease forwards;
