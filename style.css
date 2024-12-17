@@ -11,6 +11,7 @@
   --gradient-1: linear-gradient(45deg, #0ef, #2af);
   --gradient-2: linear-gradient(135deg, #0ef, #2af);
   --shadow-color: rgba(14, 255, 255, 0.2);
+
   /* Custom Scrollbar */
   ::-webkit-scrollbar {
     width: 1rem;
@@ -437,6 +438,20 @@ footer::before {
   .hero-image {
     margin: 0 auto 3rem;
     margin-top: 5rem;
+    max-width: 300px;
+    /* Added max-width for better control */
+  }
+
+  .glowing-circle {
+    width: 280px;
+    /* Fixed width for tablets */
+    height: 280px;
+  }
+
+  .glowing-circle .image {
+    width: 240px;
+    /* Fixed width for tablets */
+    height: 240px;
   }
 
   .socialMedia {
@@ -471,25 +486,46 @@ footer::before {
     width: 20px;
     height: 20px;
   }
+
   .hero {
     padding-bottom: 5rem;
+  }
+
+  .hero-image {
+    max-width: 250px;
+    /* Smaller max-width for mobile */
+  }
+
+  .glowing-circle {
+    width: 220px;
+    /* Fixed width for mobile */
+    height: 220px;
+  }
+
+  .glowing-circle .image {
+    width: 180px;
+    /* Fixed width for mobile */
+    height: 180px;
   }
 }
 
 @media (max-width: 350px) {
   .hero-image {
-    width: 90%;
+    max-width: 200px;
+    /* Even smaller for very small devices */
     margin-bottom: 2rem;
   }
 
   .glowing-circle {
-    width: 80vw;
-    height: 80vw;
+    width: 180px;
+    /* Fixed width for very small devices */
+    height: 180px;
   }
 
   .glowing-circle .image {
-    width: 70vw;
-    height: 70vw;
+    width: 150px;
+    /* Fixed width for very small devices */
+    height: 150px;
   }
 
   .socialMedia {
@@ -650,6 +686,7 @@ footer::before {
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.8;
 }
+
 .btn-box {
   display: flex;
   gap: 2rem;
