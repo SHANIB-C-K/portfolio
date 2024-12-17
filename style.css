@@ -11,6 +11,25 @@
   --gradient-1: linear-gradient(45deg, #0ef, #2af);
   --gradient-2: linear-gradient(135deg, #0ef, #2af);
   --shadow-color: rgba(14, 255, 255, 0.2);
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-color);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--hover-color);
+    box-shadow: 0 0 8px var(--shadow-color);
+  }
 }
 
 /* Reset and Base Styles */
@@ -437,6 +456,7 @@ footer::before {
 
   .navbar {
     padding: 1rem 2%;
+    gap: 1rem;
   }
 
   .services-box {
