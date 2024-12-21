@@ -1115,3 +1115,53 @@ footer::before {
   opacity: 1;
   transform: translateY(0);
 }
+
+.age-container {
+  background: rgba(0, 238, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 20px 0;
+  box-shadow: 0 0 15px rgba(0, 238, 255, 0.2);
+}
+
+.age-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0ef;
+  font-family: 'Monaco', monospace;
+}
+
+.animate-age {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add a label above the age */
+.age-display::before {
+  content: 'My Current Age';
+  display: block;
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 5px;
+  font-family: sans-serif;
+}
+
+/* Add "years" after the number */
+.age-display::after {
+  content: ' years';
+  font-size: 1rem;
+  color: #888;
+  font-family: sans-serif;
+}
